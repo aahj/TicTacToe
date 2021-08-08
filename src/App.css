@@ -1,38 +1,90 @@
+body {
+  color: #fff;
+  background-color: #111;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .App {
   text-align: center;
+  padding: 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+  display: inline-block;
+  width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+._row {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 45px;
+  border: 1px solid gray;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+  width: 150px;
+  padding: 6px;
+  background-color: darkgoldenrod;
+  color: #fff;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.winner-area {
+  position: relative;
+  animation-name: move-in;
+  animation-duration: 4s;
 }
 
-@keyframes App-logo-spin {
+.winner-area h4 {
+  display: inline-block;  
+  color: darkgoldenrod;
+  font-weight: 700;
+}
+
+.scoreboard ul {
+  animation-name: fade-in;
+  animation-duration: 4s;
+}
+
+.scoreboard ul li {
+  display: block;
+  margin: 12px 0;
+  padding: 5px;
+  border: 1px solid #fff;
+  list-style: none;
+  box-shadow: 1px ​4px 8px 3px #888888;
+}
+
+@keyframes fade-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0.3;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-in {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
   }
 }

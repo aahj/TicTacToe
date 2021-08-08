@@ -1,0 +1,4 @@
+export const ADD_USER='ADD_USER';
+export const UPDATE_SCORE1='UPDATE_SCORE1';
+export const UPDATE_SCORE2='UPDATE_SCORE2';
+
